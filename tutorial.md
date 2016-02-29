@@ -1,5 +1,6 @@
 This tutorial is primarily for Terminal (Mac OSX), but has very similar syntax for Windows CMD-line/Powershell 
 
+#Clone
 After creating a directory in GitHub, open the CMD line, and use the command
 git clone  https://[github repository].git
 
@@ -11,12 +12,14 @@ git clone https://github.com/SamuelHPhillips/CMD-line-tutorial.git
 This creates a local 'clone' or copy of the repository as it currently is, on your machine.
 Once the clone is saved locally, you can add, edit, or delete files as you'd like in your local clone.
 
+#Status
 When you're in the local directory, using the command:
 git status
 
 will return any differences between the current branch in the repository you're working on, and your local version, including:
 1) modifications to existing files 2) any new (untracked) files 3) deleted files, etc.
 
+#Add
 After making changes to the local clone (while still in that directory), the command:
 git add [filename]
 
@@ -28,6 +31,7 @@ to add ALL files that have been created in the local directory (useful if many f
 
 Using git status now will show the file name, but will also tell you that the file still needs to be committed.
 
+#Commit
 To do this, use the command:
 git commit -n "[message]"
 
@@ -36,10 +40,13 @@ git commit -n "added file index.html"
 
 This still hasn't saved the changes to the GitHub repository however, you still need to do one more thing.
 
+#Push
 To finalize the commit to the online repository, use the command:
 git push
 
 this "pushes" the latest commit to the GitHub repository, permenantly changing it's content. 
+
+#Pull
 Now, anyone who (with file authorization) uses the command:
 git pull
 
